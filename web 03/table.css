@@ -1,0 +1,56 @@
+table {
+    border-collapse: collapse; /* Pour coller les bordures de tableau */
+    width: 80%;
+    border: 3px solid rgb(2, 68, 2);
+}
+thead, tbody :nth-child(1) {
+    width: 40%;
+}
+thead, tbody :nth-child(2n+1),
+thead, tbody :nth-child(2n+2) {
+    width: 20%;
+}
+
+th {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(2, 68, 2);
+    text-align: right;
+}
+thead :nth-child(1) {
+    text-align: left;
+}
+
+
+caption {
+    font-size: 200%;
+}
+tbody td, th {
+    padding: 10px;
+    border-bottom: 1px solid rgb(2, 68, 2);
+}
+
+.striped tr:nth-child(even){
+    background-color: rgb(125, 231, 125);
+}
+
+.striped tr:nth-child(odd) {
+    background-color: rgb(226, 224, 224);
+}
+
+.striped td:nth-child(2n+2),
+.striped td:nth-child(2n+3),
+.striped td:nth-child(2n+4) {
+    text-align: right;
+}
+
+tfoot td {
+    padding: 10px;
+    border: 1px solid rgb(2, 68, 2);
+    color: rgb(0, 0, 0);
+}
+
+tfoot td:nth-child(2n) {
+    text-align: right;
+}
