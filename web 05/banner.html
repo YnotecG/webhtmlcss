@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS3 Transforms, Transitions and Animations</title>
+<link href="styles.css" rel="stylesheet">
+<style>
+	/* Permet d'augmenter la taille des boutons de 20% quand la souris survole le bouton */
+	/*nav .home :hover, nav .gallery :hover, nav .story :hover, nav .about :hover {
+		transform:scale(1.2,1.2);
+		-webkit-transform:scale(1.2, 1.2);
+		animation-duration: 3s;
+	} */
+	nav .home :hover, nav .gallery :hover, nav .story :hover, nav .about :hover {
+		animation-duration: 0.5s;
+		transform:scale(1.2,1.2);
+		transition-property: transform;
+   		transition-duration: 0.5s;
+		transition: background-color 0.5s ease-in 1s;
+		background-color: red;
+	}
+	.logo {
+		animation-duration: 1.5s;
+		animation-name: rouler;
+		animation-timing-function: linear;
+	}
+	@-webkit-keyframes rouler {
+		0% {
+			left: 0%;
+			rotate: 1turn;
+			transform:scale(1);
+		}
+		50% {
+			left: 120%;
+			rotate: -2turn;
+			transform:scale(0.75);
+			rotate: 0turn;
+		}
+		100% {
+			left: 0%;
+			rotate: 1turn;
+			transform:scale(1);
+		}
+	}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<img src="logo.png" class="logo" width="150" height="150" alt="CSS3: The Missing Manual">
+<h1>CSS3 Transforms, Transitions and Animations</h1>
+<nav>
+	<ul>
+		<li class="home"><a href="#">Home</a></li>
+		<li class="gallery"><a href="#">Gallery</a></li>
+		<li class="story"><a href="#">Story</a></li>
+		<li class="about"><a href="#">About Us</a></li>
+	</ul>
+</nav>
+</div>
+</header>
+</body>
+</html>
